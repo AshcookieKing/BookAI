@@ -1,0 +1,127 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.hero {
+  padding-top: 0.5rem;
+}
+
+.kicker {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+}
+
+.grad {
+  background: linear-gradient(90deg, #fcd34d, #f472b6, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.heroCtas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 900px) {
+  .tiles {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tile {
+  position: relative;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.35rem 1.75rem;
+  border: 1px solid var(--stroke);
+  overflow: hidden;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, border-color 0.2s;
+  background: var(--bg-panel);
+}
+
+.tile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--tile-bg);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.tile:hover {
+  transform: translateY(-3px);
+  border-color: rgba(245, 183, 58, 0.35);
+}
+
+.tile > * {
+  position: relative;
+  z-index: 1;
+}
+
+.tileTag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(248, 246, 255, 0.85);
+  margin-bottom: 0.5rem;
+}
+
+.tileTitle {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.tileDesc {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(230, 225, 245, 0.88);
+  line-height: 1.45;
+  flex: 1;
+}
+
+.tileArrow {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  color: #fde68a;
+}
+
+.band {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bandTitle {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  margin: 0 0 0.35rem;
+}
+
+.bandText {
+  margin: 0;
+  color: var(--muted);
+  max-width: 56ch;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}

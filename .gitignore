@@ -1,0 +1,15 @@
+.env
+venv/
+.venv/
+__pycache__/
+*.pyc
+.python-version
+
+# Frontend (Vite)
+web/node_modules/
+web/dist/
+web/*.tsbuildinfo
+
+# Не относится к BookAI (Arma / другое)
+SLServer/
+mission.sqm
